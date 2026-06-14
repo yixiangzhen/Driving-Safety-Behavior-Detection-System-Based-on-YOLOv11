@@ -1,6 +1,6 @@
 # Driving-Safety-Behavior-Detection-System-Based-on-YOLOv11
 Driving Safety Behavior Detection System Based on YOLOv11
-# 基于 YOLOv11 的驾驶员安全行为监测系统
+
 
 ## 项目简介
 
