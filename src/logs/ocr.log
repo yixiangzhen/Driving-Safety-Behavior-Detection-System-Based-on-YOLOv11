@@ -1,0 +1,1199 @@
+2025-09-09 19:50:18,825 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 19:50:19,673 - INFO - PaddleOCR初始化成功
+2025-09-09 19:50:49,583 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:53:13,893 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 19:53:14,756 - INFO - PaddleOCR初始化成功
+2025-09-09 19:53:47,270 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 251, in forward
+      out3, scale_factor=2, mode="nearest", align_mode=1)  # 1/4
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 80, 96] and the shape of Y = [1, 96, 24, 16]. Received [80] in X is not equal to [24] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:53:47,412 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 247, in forward
+      in5, scale_factor=2, mode="nearest", align_mode=1)  # 1/16
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 10, 14] and the shape of Y = [1, 96, 20, 24]. Received [10] in X is not equal to [20] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:53:50,167 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 247, in forward
+      in5, scale_factor=2, mode="nearest", align_mode=1)  # 1/16
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 10, 28] and the shape of Y = [1, 96, 20, 24]. Received [10] in X is not equal to [20] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:53:52,171 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 251, in forward
+      out3, scale_factor=2, mode="nearest", align_mode=1)  # 1/4
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 72, 96] and the shape of Y = [1, 96, 16, 16]. Received [72] in X is not equal to [16] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:53:52,276 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:53:52,475 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 251, in forward
+      out3, scale_factor=2, mode="nearest", align_mode=1)  # 1/4
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 80, 96] and the shape of Y = [1, 96, 40, 16]. Received [80] in X is not equal to [40] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:53:52,596 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:53:52,914 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 36, 48] and the shape of Y = [1, 96, 20, 24]. Received [36] in X is not equal to [20] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:53:52,947 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:53:52,951 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 79, in forward
+      x = self.backbone(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/tmp/tmpwi9hskx0.py", line 21, in forward
+      for_loop_condition_0, for_loop_body_0, [__for_loop_var_index_0, x])
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 45, in convert_while_loop
+      loop_vars = _run_py_while(cond, body, loop_vars)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 59, in _run_py_while
+      loop_vars = body(*loop_vars)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/backbones/det_mobilenet_v3.py", line 149, in forward
+      x = stage(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/container.py", line 98, in forward
+      input = layer(input)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/backbones/det_mobilenet_v3.py", line 235, in forward
+      x = self.expand_conv(inputs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/backbones/det_mobilenet_v3.py", line 179, in forward
+      x = self.conv(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/nn/layer/conv.py", line 677, in forward
+      use_cudnn=self._use_cudnn)
+    File "/usr/local/lib/python3.7/site-packages/paddle/nn/functional/conv.py", line 148, in _conv_nd
+      type=op_type, inputs=inputs, outputs=outputs, attrs=attrs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layer_helper.py", line 43, in append_op
+      return self.main_program.current_block().append_op(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: The current CompatMetaTensor is not initialized.
+      [Hint: Expected meta_tensor.initialized() == true, but received meta_tensor.initialized():0 != true:1.] (at ..\paddle\fluid\framework\infershape_utils.cc:173)
+      [operator < fused_conv2d > error]
+2025-09-09 19:53:53,967 - ERROR - OCR处理对象 12 时发生错误: 'TextStitcher' object has no attribute 'update_history'
+2025-09-09 19:53:55,106 - ERROR - OCR处理对象 0 时发生错误: 'TextStitcher' object has no attribute 'update_history'
+2025-09-09 19:53:55,313 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:53:55,454 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 20, 56] and the shape of Y = [1, 96, 36, 48]. Received [20] in X is not equal to [36] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:54:07,810 - ERROR - OCR处理对象 0 时发生错误: 'TextStitcher' object has no attribute 'update_history'
+2025-09-09 19:54:10,547 - ERROR - OCR处理对象 1 时发生错误: 'TextStitcher' object has no attribute 'update_history'
+2025-09-09 19:54:11,841 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 254, in forward
+      p4 = self.inp_conv[2](out4)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 209, in forward
+      x = self.in_conv(ins)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/nn/layer/conv.py", line 677, in forward
+      use_cudnn=self._use_cudnn)
+    File "/usr/local/lib/python3.7/site-packages/paddle/nn/functional/conv.py", line 148, in _conv_nd
+      type=op_type, inputs=inputs, outputs=outputs, attrs=attrs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layer_helper.py", line 43, in append_op
+      return self.main_program.current_block().append_op(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: The current CompatMetaTensor is not initialized.
+      [Hint: Expected meta_tensor.initialized() == true, but received meta_tensor.initialized():0 != true:1.] (at ..\paddle\fluid\framework\infershape_utils.cc:173)
+      [operator < conv2d > error]
+2025-09-09 19:54:12,173 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:54:12,540 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 16, 20] and the shape of Y = [1, 96, 40, 44]. Received [16] in X is not equal to [40] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:54:12,875 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 40, 44] and the shape of Y = [1, 96, 8, 4]. Received [40] in X is not equal to [8] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:54:13,020 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 20, 40] and the shape of Y = [1, 96, 40, 44]. Received [20] in X is not equal to [40] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 19:54:13,362 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:54:13,543 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:54:13,671 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:54:13,875 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 19:54:21,155 - ERROR - OCR处理对象 0 时发生错误: 'TextStitcher' object has no attribute 'update_history'
+2025-09-09 20:01:11,980 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 20:01:12,938 - INFO - PaddleOCR初始化成功
+2025-09-09 20:01:35,575 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 20:01:35,588 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 251, in forward
+      out3, scale_factor=2, mode="nearest", align_mode=1)  # 1/4
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 8, 16] and the shape of Y = [1, 96, 72, 80]. Received [8] in X is not equal to [72] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 20:01:35,952 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 20:01:35,966 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 251, in forward
+      out3, scale_factor=2, mode="nearest", align_mode=1)  # 1/4
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 40, 16] and the shape of Y = [1, 96, 72, 80]. Received [40] in X is not equal to [72] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 20:01:36,992 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 247, in forward
+      in5, scale_factor=2, mode="nearest", align_mode=1)  # 1/16
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 18, 20] and the shape of Y = [1, 96, 18, 34]. Received [20] in X is not equal to [34] in Y at i:3.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 20:01:38,378 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 20:01:38,570 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 20:01:48,274 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 20:01:48,716 - ERROR - OCR识别错误: could not create a primitive descriptor for a convolution forward propagation primitive
+2025-09-09 20:01:49,052 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 251, in forward
+      out3, scale_factor=2, mode="nearest", align_mode=1)  # 1/4
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 72, 80] and the shape of Y = [1, 96, 40, 40]. Received [72] in X is not equal to [40] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 20:01:49,083 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 4, 12] and the shape of Y = [1, 96, 36, 40]. Received [4] in X is not equal to [36] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 20:01:53,752 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 20:01:57,424 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 20:01:57,688 - ERROR - OCR识别错误: invalid vector subscript
+2025-09-09 20:05:29,127 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 20:05:30,080 - INFO - PaddleOCR初始化成功
+2025-09-09 20:06:45,290 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 20:06:46,386 - INFO - PaddleOCR初始化成功
+2025-09-09 21:49:19,130 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 21:49:19,892 - INFO - PaddleOCR初始化成功
+2025-09-09 22:05:08,643 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 22:05:09,429 - INFO - PaddleOCR初始化成功
+2025-09-09 22:09:09,594 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 22:09:10,377 - INFO - PaddleOCR初始化成功
+2025-09-09 22:09:59,871 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:09:59,921 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:09:59,961 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:00,560 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:00,601 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:00,694 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:00,729 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:00,962 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:01,006 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:01,593 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 22:10:01,655 - ERROR - OCR识别错误: could not reshape a memory descriptor
+2025-09-09 22:10:01,715 - ERROR - OCR识别错误: could not reshape a memory descriptor
+2025-09-09 22:10:02,164 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,478 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,522 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,560 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,600 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,638 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,679 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,721 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,763 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:02,998 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,046 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,096 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,198 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,246 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,298 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,340 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,378 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,446 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,486 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,587 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:03,623 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:04,999 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 16, 16] and the shape of Y = [1, 96, 28, 20]. Received [16] in X is not equal to [28] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 22:10:11,117 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:11,156 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:11,195 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:11,233 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:11,270 - ERROR - OCR识别错误: could not execute a primitive
+2025-09-09 22:10:12,802 - ERROR - OCR识别错误: In user code:
+
+    File "tools/export_model.py", line 172, in <module>
+      main()
+    File "tools/export_model.py", line 165, in main
+      sub_model_save_path, logger)
+    File "tools/export_model.py", line 99, in export_single_model
+      paddle.jit.save(model, save_path)
+    File "<decorator-gen-101>", line 2, in save
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/jit.py", line 744, in save
+      inner_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 517, in concrete_program_specify_input_spec
+      *desired_input_spec)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 427, in get_concrete_program
+      concrete_program, partial_program_layer = self._program_cache[cache_key]
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 723, in __getitem__
+      self._caches[item] = self._build_once(item)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 714, in _build_once
+      **cache_key.kwargs)
+    File "<decorator-gen-99>", line 2, in from_func_spec
+      
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/wrapped_decorator.py", line 25, in __impl__
+      return wrapped_func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/base.py", line 51, in __impl__
+      return func(*args, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/program_translator.py", line 662, in from_func_spec
+      outputs = static_func(*inputs)
+    File "/tmp/tmpmmf1gn4e.py", line 29, in forward
+      false_fn_1, (x,), (x,), (x,))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 211, in convert_ifelse
+      out = _run_py_ifelse(pred, true_fn, false_fn, true_args, false_args)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/dygraph_to_static/convert_operators.py", line 257, in _run_py_ifelse
+      return true_fn(*true_args) if pred else false_fn(*false_args)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/architectures/base_model.py", line 82, in forward
+      x = self.neck(x)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 917, in __call__
+      return self._dygraph_call_func(*inputs, **kwargs)
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/dygraph/layers.py", line 907, in _dygraph_call_func
+      outputs = self.forward(*inputs, **kwargs)
+    File "/paddle/debug/PaddleOCR/ppocr/modeling/necks/db_fpn.py", line 249, in forward
+      out4, scale_factor=2, mode="nearest", align_mode=1)  # 1/8
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/layers/math_op_patch.py", line 347, in __impl__
+      attrs={'axis': axis})
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 3184, in append_op
+      attrs=kwargs.get("attrs", None))
+    File "/usr/local/lib/python3.7/site-packages/paddle/fluid/framework.py", line 2224, in __init__
+      for frame in traceback.extract_stack():
+
+    InvalidArgumentError: Broadcast dimension mismatch. Operands could not be broadcast together with the shape of X = [1, 96, 16, 12] and the shape of Y = [1, 96, 24, 16]. Received [16] in X is not equal to [24] in Y at i:2.
+      [Hint: Expected x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0) == true, but received x_dims_array[i] == y_dims_array[i] || (x_dims_array[i] <= 1 && x_dims_array[i] != 0) || (y_dims_array[i] <= 1 && y_dims_array[i] != 0):0 != true:1.] (at ..\paddle/phi/kernels/funcs/common_shape.h:86)
+      [operator < elementwise_add > error]
+2025-09-09 22:10:13,635 - ERROR - OCR识别错误: could not create a primitive descriptor for a reorder primitive
+2025-09-09 22:24:08,618 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 22:24:09,354 - INFO - PaddleOCR初始化成功
+2025-09-09 22:54:18,395 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 22:54:19,176 - INFO - PaddleOCR初始化成功
+2025-09-09 22:55:48,718 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 22:55:49,378 - INFO - PaddleOCR初始化成功
+2025-09-09 23:01:44,913 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 23:01:45,645 - INFO - PaddleOCR初始化成功
+2025-09-09 23:12:02,156 - INFO - 初始化PaddleOCR，使用GPU: True，GPU ID: 0
+2025-09-09 23:12:06,601 - INFO - PaddleOCR初始化成功
+2025-09-09 23:13:39,155 - INFO - 初始化PaddleOCR，使用GPU: True，GPU ID: 0
+2025-09-09 23:13:43,686 - INFO - PaddleOCR初始化成功
+2025-09-09 23:15:23,542 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 23:15:24,203 - INFO - PaddleOCR初始化成功
+2025-09-09 23:19:15,601 - INFO - 初始化PaddleOCR，使用GPU: False，GPU ID: 0
+2025-09-09 23:19:16,265 - INFO - PaddleOCR初始化成功

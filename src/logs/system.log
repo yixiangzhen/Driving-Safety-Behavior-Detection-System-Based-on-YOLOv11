@@ -1,0 +1,65 @@
+2025-09-09 19:50:18,349 - INFO - 初始化药瓶OCR系统
+2025-09-09 19:50:18,349 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 19:50:18,349 - INFO - YOLO设备: cuda, OCR使用GPU: False, GPU ID: 0
+2025-09-09 19:50:19,674 - INFO - 各模块初始化成功
+2025-09-09 19:50:19,676 - INFO - 内存清理线程已启动
+2025-09-09 19:50:49,686 - ERROR - 内存清理过程中发生错误: 'TextStitcher' object has no attribute 'clean_history'
+2025-09-09 19:53:13,315 - INFO - 初始化药瓶OCR系统
+2025-09-09 19:53:13,315 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 19:53:13,315 - INFO - YOLO设备: cuda, OCR使用GPU: False, GPU ID: 0
+2025-09-09 19:53:14,756 - INFO - 各模块初始化成功
+2025-09-09 19:53:14,758 - INFO - 内存清理线程已启动
+2025-09-09 19:53:44,770 - ERROR - 内存清理过程中发生错误: 'TextStitcher' object has no attribute 'clean_history'
+2025-09-09 19:54:14,773 - ERROR - 内存清理过程中发生错误: 'TextStitcher' object has no attribute 'clean_history'
+2025-09-09 20:01:11,881 - INFO - 初始化药瓶OCR系统
+2025-09-09 20:01:11,882 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 20:01:11,882 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 20:01:12,939 - INFO - 各模块初始化成功
+2025-09-09 20:05:29,053 - INFO - 初始化药瓶OCR系统
+2025-09-09 20:05:29,054 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 20:05:29,054 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 20:05:30,081 - INFO - 各模块初始化成功
+2025-09-09 20:06:45,180 - INFO - 初始化药瓶OCR系统
+2025-09-09 20:06:45,180 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 20:06:45,180 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 20:06:46,387 - INFO - 各模块初始化成功
+2025-09-09 21:49:19,022 - INFO - 初始化药瓶OCR系统
+2025-09-09 21:49:19,022 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 21:49:19,022 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 21:49:19,893 - INFO - 各模块初始化成功
+2025-09-09 22:05:08,553 - INFO - 初始化药瓶OCR系统
+2025-09-09 22:05:08,553 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 22:05:08,554 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 22:05:09,430 - INFO - 各模块初始化成功
+2025-09-09 22:09:09,509 - INFO - 初始化药瓶OCR系统
+2025-09-09 22:09:09,509 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 22:09:09,509 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 22:09:10,377 - INFO - 各模块初始化成功
+2025-09-09 22:22:15,784 - INFO - 初始化药瓶OCR系统
+2025-09-09 22:22:15,784 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 22:22:15,784 - INFO - YOLO设备: gpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 22:22:15,846 - ERROR - 模块初始化失败: Expected one of cpu, cuda, ipu, xpu, mkldnn, opengl, opencl, ideep, hip, ve, fpga, maia, xla, lazy, vulkan, mps, meta, hpu, mtia, privateuseone device type at start of device string: gpu
+2025-09-09 22:24:08,068 - INFO - 初始化药瓶OCR系统
+2025-09-09 22:24:08,068 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 22:24:08,068 - INFO - YOLO设备: cuda, OCR使用GPU: False, GPU ID: 0
+2025-09-09 22:24:09,355 - INFO - 各模块初始化成功
+2025-09-09 22:54:17,885 - INFO - 初始化药瓶OCR系统
+2025-09-09 22:54:17,885 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 22:54:17,885 - INFO - YOLO设备: cuda, OCR使用GPU: False, GPU ID: 0
+2025-09-09 22:54:19,176 - INFO - 各模块初始化成功
+2025-09-09 22:55:48,407 - INFO - 初始化药瓶OCR系统
+2025-09-09 22:55:48,407 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 22:55:48,407 - INFO - YOLO设备: cuda, OCR使用GPU: False, GPU ID: 0
+2025-09-09 22:55:49,380 - INFO - 各模块初始化成功
+2025-09-09 23:01:44,503 - INFO - 初始化药瓶OCR系统
+2025-09-09 23:01:44,503 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 23:01:44,504 - INFO - YOLO设备: cuda, OCR使用GPU: False, GPU ID: 0
+2025-09-09 23:01:45,645 - INFO - 各模块初始化成功
+2025-09-09 23:16:13,570 - INFO - 初始化药瓶OCR系统
+2025-09-09 23:16:13,570 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 23:16:13,570 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 23:16:13,570 - ERROR - 模块初始化失败: YoloDetector.__init__() takes 2 positional arguments but 3 were given
+2025-09-09 23:19:15,549 - INFO - 初始化药瓶OCR系统
+2025-09-09 23:19:15,549 - INFO - 模型路径: D:\A_Python\跟着黑马学ai\workworkwrokwrok\工业图像识别1\ultralytics\yolo11n.pt
+2025-09-09 23:19:15,549 - INFO - YOLO设备: cpu, OCR使用GPU: False, GPU ID: 0
+2025-09-09 23:19:16,265 - INFO - 各模块初始化成功

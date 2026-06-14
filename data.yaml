@@ -1,0 +1,11 @@
+train: F:\code\yolov11\datasets\train\images
+valid: F:\code\yolov11\datasets\valid\images
+
+
+nc: 7
+names: ['awake', 'distracted', 'drowsy', 'head drop', 'phone', 'smoking', 'yawn']
+
+roboflow:
+  workspace: yi-lwbfp
+  project: drowsiness-sgvf2-g0vcl
+  version: 1
